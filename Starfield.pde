@@ -7,15 +7,12 @@ void setup(){
   for(int i=0;i<star.length;i++){
     star[i]=new field();
   }
-  if(keyPressed && arrive==0){
-    arrive=1;
-    star[0].a=(float)Math.random()*255;
-    star[0].b=(float)Math.random()*255;
-    star[0].c=(float)Math.random()*255;
-  }
 }
 void draw(){
-  //background(0,0,0);
+  background(0,0,0);
+  if(keyPressed){
+  text("100",100,100);
+  }
   if(keyPressed && arrive==0){
     arrive=1;
     star[0].a=(float)Math.random()*255;
