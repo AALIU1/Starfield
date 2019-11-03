@@ -10,9 +10,7 @@ void setup(){
 }
 void draw(){
   background(0,0,0);
-  if(keyPressed){
-  text("100",100,100);
-  }
+  ellipse(100,100,100,100);
   if(keyPressed && arrive==0){
     arrive=1;
     star[0].a=(float)Math.random()*255;
