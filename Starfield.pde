@@ -8,26 +8,6 @@ void setup(){
     star[i]=new field();
   }
 }
-void draw(){
-  background(0,0,0);
-  for(int i=1; i<star.length; i++){
-    star[i].move();
-    star[i].show();
-  }
-  if(keyPressed && arrive==0){
-    arrive=1;
-    star[0].a=(float)Math.random()*255;
-    star[0].b=(float)Math.random()*255;
-    star[0].c=(float)Math.random()*255;
-  }
-  if(arrive==0){
-    ellipse(100,100,100,100);
-  }
-  if(arrive>=300){
-    s=1;
-  }
-  star[0].odd();
-}
 class field{
   double x,y,speed,angle;
   float size,ca,cb,pa,pb,psize,ss,cx,cy,cz,a,b,c;
@@ -100,4 +80,21 @@ class field{
     fill(cx,cy,cz);
     ellipse(pa,pb,psize,psize);
   }
+}
+void draw(){
+  background(0,0,200);
+  for(int i=1; i<star.length; i++){
+    star[i].move();
+    star[i].show();
+  }
+  if(keyPressed && arrive==0){
+    arrive=1;
+    star[0].a=(float)Math.random()*255;
+    star[0].b=(float)Math.random()*255;
+    star[0].c=(float)Math.random()*255;
+  }
+  if(arrive>=300){
+    s=1;
+  }
+  star[0].odd();
 }
