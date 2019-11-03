@@ -1,13 +1,6 @@
 field[]star;
 int arrive=0;
 int s=0;
-void setup(){
-  size(2000,1000);
-  star=new field[100];
-  for(int i=0;i<star.length;i++){
-    star[i]=new field();
-  }
-}
 class field{
   double x,y,speed,angle;
   float size,ca,cb,pa,pb,psize,ss,cx,cy,cz,a,b,c;
@@ -79,6 +72,13 @@ class field{
     }
     fill(cx,cy,cz);
     ellipse(pa,pb,psize,psize);
+  }
+}
+void setup(){
+  size(2000,1000);
+  star=new field[100];
+  for(int i=0;i<star.length;i++){
+    star[i]=new field();
   }
 }
 void draw(){
