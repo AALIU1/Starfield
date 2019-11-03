@@ -82,7 +82,7 @@ void setup(){
   }
 }
 void draw(){
-  background(0,0,200);
+  background(0,0,0);
   for(int i=1; i<star.length; i++){
     star[i].move();
     star[i].show();
