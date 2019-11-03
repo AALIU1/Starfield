@@ -10,7 +10,7 @@ void setup(){
 }
 void draw(){
   background(0,0,0);
-  if((keyPressed||mouseClicked) &&arrive==0){
+  if((keyPressed||mousePressed) &&arrive==0){
     arrive=1;
     star[0].a=(float)Math.random()*255;
     star[0].b=(float)Math.random()*255;
