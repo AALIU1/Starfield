@@ -15,7 +15,7 @@ void setup(){
   }
 }
 void draw(){
-  background(0,0,0);
+  background(0,0,100);
   if(keyPressed && arrive==0){
     arrive=1;
     star[0].a=(float)Math.random()*255;
