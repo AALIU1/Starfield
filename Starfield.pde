@@ -1,17 +1,15 @@
-field[]star;
+Particle[]star;
 int arrive=0;
 int s=0;
 void setup(){
   size(2000,1000);
-  star=new field[100];
+  star=new Particle[100];
   for(int i=0;i<star.length;i++){
-    star[i]=new field();
+    star[i]=new Particle();
   }
 }
 void draw(){
-  background(0,0,100);
-  star[5].show();
-  star[5].move();
+  background(0,0,0);
   for(int i=1; i<star.length; i++){
     star[i].move();
     star[i].show();
@@ -27,10 +25,10 @@ void draw(){
   }
   star[0].odd();
 }
-class field{
+class Particle{
   double x,y,speed,angle;
   float size,ca,cb,pa,pb,psize,ss,cx,cy,cz,a,b,c;
-  field(){
+  Particle(){
     speed=Math.random()*10+10;
     angle=Math.random()*10+1;
     size=0.1;
