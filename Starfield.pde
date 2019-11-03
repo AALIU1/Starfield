@@ -9,14 +9,14 @@ void setup(){
   }
 }
 void draw(){
-  background(0,0,150);
-  if((keyPressed||mousePressed) &&arrive==0){
+  background(0,0,0);
+  if((keyPressed && arrive==0){
     arrive=1;
     star[0].a=(float)Math.random()*255;
     star[0].b=(float)Math.random()*255;
     star[0].c=(float)Math.random()*255;
   }
-  for(int i=1;i<star.length;i++){
+  for(int i=1; i<star.length; i++){
     star[i].move();
     star[i].show();
   }
@@ -49,7 +49,7 @@ class field{
     if(speed>6){
       speed-=0.1;
     }
-    if((x>=1000 || x<=-1000||y<=-500||y>=500) &&arrive>0&& arrive<300){
+    if((x>=1000 || x<=-1000 || y<=-500 || y>=500) && arrive>0 && arrive<300){
       x=Math.random()*4-2;
       y=Math.random()*4-2;
       speed=Math.random()*10+10;
@@ -61,7 +61,7 @@ class field{
       star[0].cx-=5;
       star[0].cy-=5;
       star[0].cz-=5;
-      if(star[0].psize>=10&&arrive<250){
+      if(star[0].psize>=10 && arrive<250){
         star[0].psize-=5;
       }
       if(star[0].psize<10){
@@ -82,7 +82,7 @@ class field{
     pop();
   }
   void odd(){
-    if(arrive>250&&ss>0){
+    if(arrive>250 && ss>0){
       psize+=8*ss;
       ss-=0.025;
       cx=a;
