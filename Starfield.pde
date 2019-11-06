@@ -75,11 +75,11 @@ class Particle{
     }
   }
   void show(){
-    push();
+    pushMatrix();
     translate(1000,500);
     fill(255,255,255);
     ellipse((float)x,(float)y,size,size);
-    pop();
+    popMatrix();
   }
   void odd(){
     if(arrive>250 && ss>0){
